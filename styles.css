@@ -202,12 +202,12 @@ hr {
 .repo-language {
   color: rgba(0, 0, 0, 0.7);
 }
-.lang-color {
-  background-color: yellow;
+p:empty {
   width: 10px;
   height: 10px;
   border-radius: 100%;
   margin-right: 5px;
+  background: orangered;
 }
 .repo-lang-icon {
   margin-left: 20px;
