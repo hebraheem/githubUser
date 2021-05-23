@@ -5,92 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
-<body>
-    <header class="first-header">
-        <div class="header">
-            <a href=""><i class="fab fa-github git-icon"></i></a>
-            <input type="text" class="input" placeholder="Search or jump to...">
-            <ul class="top-ul">
-                <li class="top-li"><a href="">Pull request</a></li>
-                <li class="top-li"><a href="">Issues</a></li>
-                <li class="top-li"><a href="">Codespaces</a></li>
-                <li class="top-li"><a href="">Marketplace</a></li>
-                <li class="top-li"><a href="">Explore</a></li>
-            </ul>
-        </div>
-        <div class="right-icons">
-            <i class="fal fa-bell bell"></i>
-            <i class="fas fa-plus add-icon"></i>
-            <i class="fas fa-caret-down drop-down"></i>
-            <img class="user-image" src="./assests/img/defautImg.jpeg" alt="ui">
-            <i class="fas fa-caret-down" style="margin-left: 5px;"></i>
-        </div>
-    </header>
-    <!-- second header section -->
-    <header class="second-header">
-        <div class="nav-bar">
-            <ul class="nav-ul">
-                <li class="nav-li"><a href=""> <i class="far fa-book-open nav-icon"></i> Overview</a></li>
-                <li class="nav-li active"><a href="" class="activelink"> <i class="fas fa-book nav-icon"></i>
-                        Repositories <span class="rep-count">123</span></a></li>
-                <li class="nav-li"><a href=""> <i class="fal fa-booth-curtain nav-icon"></i> Projects</a></li>
-                <li class="nav-li"><a href=""> <i class="far fa-cube nav-icon"></i> Pakages</a></li>
-            </ul>
-        </div>
-    </header>
-    <!-- body content section -->
-    <section class="body-content">
-        <section class="left">
-            <div>
-                <img src="./assests/img/defautImg.jpeg" alt="user avatar" class="avatar">
-                <img src="./assests/img/pinable.jpeg" class="pinable" alt="">
-            </div>
-            <div>
-                <h3 class="name">some name</h3>
-                <h6 class="user-name">user name</h6>
-                <p class="desc">some info about the user</p>
-                <p class="profession">user profession</p>
-
-            </div>
-        </section>
-        <section class="right">
-            <input type="text" placeholder="Find a repository..." class="rep-input">
-            <hr>
-            <p class="public-rep-count"><span class="count">123</span> results for <span
-                    class="count">public</span>repositories</p>
-            <hr class="count-hr">
-            <!-- repo info -->
-            <div class="repo-info">
-                <div class="repository">
-                    <h3 class="repo-name">repository name</h3>
-                    <p class="repo-desc">some useful information about the repository goes here ... and some technical
-                        jargon</p>
-                    <div style="display: flex; align-items: center;">
-                        <p></p>
-                        <p class="repo-language">
-                            HTML<i class="fal fa-star repo-lang-icon"></i><span>20</span> <i
-                                class="fal fa-code-branch repo-lang-icon fork-count"></i><span> 1 <span
-                                    class="updated">updated on
-                                    4 sept</span></span>
-                        </p>
-
-                    </div>
-                </div>
-                <div class="star-btn">
-                    <button class="star-btn"><i class="fal fa-star"></i> star</button>
-                </div>
-            </div>
-            <hr>
-        </section>
+<body class="body">
+    <section class="home-section">
+        <h1 class="search-user">Search github user</h1>
+        <form action="" id="submit">
+            <input type="text" id="search" placeholder="search github user..." value>
+            <input type="submit" placeholder="Search" class="sub-btn">
+        </form>
     </section>
-    <script data-main="./scripts/main.js" src="./scripts/require.js"></script>
-    <!-- <script src="./scripts/main.js"></script> -->
+    <script>
+        let submitBtn = document.querySelector("#submit");
+        let searchTerm = document.querySelector("#search");
+
+        submitBtn.addEventListener("submit", function (e) {
+            e.preventDefault()
+            if (!searchTerm.value) {
+                alert("pls enter a user")
+                return
+            }
+            window.location.href = `./user.html#${searchTerm.value}`
+            searchTerm.value = ""
+        });
+    </script>
 </body>
 
 </html>

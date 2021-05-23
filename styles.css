@@ -149,6 +149,7 @@ a:hover,
 .desc,
 .profession {
   font-size: 14px;
+  width: 200px;
 }
 .right {
   width: 100%;
@@ -193,6 +194,7 @@ hr {
 .repo-name {
   color: #58a6ff;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 .repo-desc {
   font-size: 16px;
@@ -207,7 +209,6 @@ p:empty {
   height: 10px;
   border-radius: 100%;
   margin-right: 5px;
-  background: orangered;
 }
 .repo-lang-icon {
   margin-left: 20px;
@@ -223,4 +224,86 @@ p:empty {
   border-radius: 3px;
   background-color: rgba(35, 65, 100, 0.1);
   cursor: pointer;
+}
+.no-user {
+  text-align: center;
+  font-size: 200%;
+  color: #58a6ff;
+  padding-top: 10%;
+}
+
+/* home section */
+
+.home-section {
+  height: 60vh;
+  background-color: #fff;
+  width: 40%;
+  margin-top: 10%;
+  text-align: center;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 1px 2px 1px rgba(35, 65, 100, 0.1);
+}
+.body {
+  background-color: rgba(128, 128, 128, 0.2);
+  display: grid;
+  place-items: center;
+}
+#search {
+  height: 40px;
+  width: 80%;
+  padding-left: 10px;
+  outline: none;
+  border-radius: 5px;
+}
+.sub-btn {
+  width: 15%;
+  height: 40px;
+  background-color: rgba(35, 65, 100, 0.3);
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+.search-user {
+  font-size: 250%;
+  padding: 50px 0 100px 0;
+}
+
+@media only screen and (max-width: 820px) {
+  .home-section {
+    height: 70vh;
+    width: 90%;
+    margin-top: 20%;
+  }
+  .body-content {
+    display: block;
+  }
+  .nav-ul .nav-li {
+    display: none;
+  }
+  .top-ul .top-li {
+    display: none;
+  }
+  .input {
+    width: 100px;
+    transition: width 1s;
+  }
+  .input:focus {
+    width: 150px;
+  }
+  .left {
+    text-align: center;
+  }
+  .profession {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 935px) {
+  .nav-ul .nav-li {
+    padding: 38px 10px;
+  }
+  .nav-ul .nav-li a {
+    padding: 10px;
+  }
 }
