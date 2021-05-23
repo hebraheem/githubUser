@@ -293,6 +293,7 @@ p:empty {
   }
   .left {
     text-align: center;
+    margin-left: 0;
   }
   .profession {
     width: 100%;

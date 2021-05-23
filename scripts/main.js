@@ -3,7 +3,6 @@
 // dotenv.config();
 const uri = "https://api.github.com/graphql";
 // const token = process.env.APP_TOKEN;
-const textToken = "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";
 let userImage = document.querySelector(".avatar");
 let topAvatar = document.querySelector(".user-image");
 let Name = document.querySelector(".name");
@@ -128,7 +127,6 @@ const fetchData = fetch(uri, {
                                     )}
                             </span></span>
                         </p>
-
                     </div>
                   </div>
                   <div class="star-btn">
