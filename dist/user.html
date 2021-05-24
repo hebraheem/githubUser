@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="./styles.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/styles.8986bff4.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
@@ -14,7 +13,7 @@
 <body>
     <header class="first-header">
         <div class="header">
-            <a href="./index.html"><i class="fab fa-github git-icon"></i></a>
+            <a href="/index.html"><i class="fab fa-github git-icon"></i></a>
             <input type="text" class="input" placeholder="Search or jump to...">
             <ul class="top-ul">
                 <li class="top-li"><a href="">Pull request</a></li>
@@ -28,7 +27,7 @@
             <i class="fal fa-bell bell"></i>
             <i class="fas fa-plus add-icon"></i>
             <i class="fas fa-caret-down drop-down"></i>
-            <img class="user-image" src='assests/img/defautImg.jpeg' alt="ui">
+            <img class="user-image" src="/defautImg.0fa96f1c.jpeg" alt="ui">
             <i class="fas fa-caret-down" style="margin-left: 5px;"></i>
         </div>
     </header>
@@ -48,8 +47,8 @@
     <section class="body-content">
         <section class="left">
             <div>
-                <img src='./assests/img/defautImg.jpeg' alt="user avatar" class="avatar">
-                <img src="./assests/img/pinable.jpeg" class="pinable" alt="">
+                <img src="/defautImg.0fa96f1c.jpeg" alt="user avatar" class="avatar">
+                <img src="/pinable.42e65dee.jpeg" class="pinable" alt="">
                 <div class="emoji pinable">
                 </div>
 
@@ -62,10 +61,9 @@
             </div>
         </section>
         <section class="right">
-            <input type="text" placeholder="Find a repository..." class="rep-input" value>
+            <input type="text" placeholder="Find a repository..." class="rep-input" value="">
             <hr>
-            <p class="public-rep-count"><span class="count">123</span> results for <span
-                    class="count">public</span>repositories</p>
+            <p class="public-rep-count"><span class="count">123</span> results for <span class="count">public</span>repositories</p>
             <hr class="count-hr">
             <!-- repo info -->
             <div class="repo-content">
@@ -75,14 +73,10 @@
             </div>
         </section>
     </section>
-    <script src="./index.js"></script>
-    <script>
-        const userName = window.location.hash.substring(1);
-        const notFoundUser = document.querySelector('.no-user');
-        notFoundUser.innerHTML = `<h1>Oops!!! <br> looks like we don’t have any results for this search term
-            <span style="text-decoration: underline">${userName}</span>. Try
-            searching another user</h1>`
-    </script>
+    <script src="/githubUser.e31bb0bc.js"></script>
+    <script>var userName = window.location.hash.substring(1);
+var notFoundUser = document.querySelector('.no-user');
+notFoundUser.innerHTML = "<h1>Oops!!! <br> looks like we don\u2019t have any results for this search term\n            <span style=\"text-decoration: underline\">".concat(userName, "</span>. Try\n            searching another user</h1>");</script>
 </body>
 
 </html>

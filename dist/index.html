@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/styles.8986bff4.css">
+    <script src="/githubUser.e31bb0bc.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script src="/styles.8986bff4.js"></script></head>
+
+<body class="body">
+    <section class="home-section">
+        <h1 class="search-user">Search github user</h1>
+        <form action="" id="submit">
+            <input type="text" id="search" placeholder="search github user..." value="">
+            <input type="submit" placeholder="Search" class="sub-btn">
+        </form>
+    </section>
+    <script>var submitBtn = document.querySelector("#submit");
+var searchTerm = document.querySelector("#search");
+submitBtn.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  if (!searchTerm.value) {
+    alert("pls enter a user");
+    return;
+  }
+
+  window.location.href = "./user.html#".concat(searchTerm.value);
+  searchTerm.value = "";
+});</script>
+</body>
+
+</html>

@@ -1,1 +1,1 @@
-module.exports.token = "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";
+module.exports.token = "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";

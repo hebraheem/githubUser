@@ -1,8 +1,6 @@
-// const fetch = require(["node-fetch"]);
-// const dotenv = require(["dotenv"]);
-// dotenv.config();
+require("dotenv").config();
 const uri = "https://api.github.com/graphql";
-// const token = process.env.APP_TOKEN;
+const token = process.env.API_KEY;
 let userImage = document.querySelector(".avatar");
 let topAvatar = document.querySelector(".user-image");
 let Name = document.querySelector(".name");
@@ -12,10 +10,11 @@ let repoCount = document.querySelector(".rep-count");
 let publicRepoCount = document.querySelector(".count");
 let repoInfo = document.querySelector(".repo-content");
 let emoji = document.querySelector(".emoji");
+let findSearch = document.querySelector(".rep-input");
 const userLogin = window.location.hash.substring(1);
-// console.log(token);
+
 const query = `
-  query ($login: String!) {
+  query ($login: String!, $name: String!) {
     user(login: $login) {
       avatarUrl
       anyPinnableItems
@@ -27,6 +26,19 @@ const query = `
       name
       websiteUrl
       url
+      repository(name:$name){
+      id
+      createdAt
+      forkCount
+      stargazerCount
+      description
+      name
+      primaryLanguage{
+        color
+        id
+        name
+      }
+    }
       twitterUsername
       status{
         emoji
@@ -74,13 +86,14 @@ const fetchData = fetch(uri, {
   method: "POST",
   headers: {
     "Content-Type": "application/json",
-    Authorization: `bearer ${textToken}`,
+    Authorization: `bearer ${token}`,
     Accept: "application/vnd.github.package-deletes-preview+json",
   },
   body: JSON.stringify({
     query,
     variables: {
       login: userLogin,
+      name: findSearch.value,
     },
   }),
 })
@@ -98,7 +111,6 @@ const fetchData = fetch(uri, {
     profession.innerHTML = user?.bio;
     emoji.innerHTML =
       user?.status?.emojiHTML !== undefined ? user?.status?.emojiHTML : "";
-    console.log(user?.status?.emojiHTML);
     repoCount.innerHTML = user?.repositories?.totalCount;
     publicRepoCount.innerHTML = publicRepo?.length;
     let repos = `<p style="display: none"></p>`;
